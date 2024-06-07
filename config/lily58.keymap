@@ -98,11 +98,11 @@
 
         connection_layer {
             bindings = <
-&bt BT_CLR  &bt BT_CLR_ALL  &bt BT_NXT  &bt BT_PRV  &bt BT_SEL 0  &bt BT_DISC 0                  &none  &none  &none  &none  &none  &none
-&none       &none           &none       &none       &bt BT_SEL 1  &bt BT_DISC 1                  &none  &none  &none  &none  &none  &none
-&none       &none           &none       &none       &bt BT_SEL 2  &bt BT_DISC 2                  &none  &none  &none  &none  &none  &none
-&none       &none           &none       &none       &bt BT_SEL 3  &bt BT_DISC 3  &none    &none  &none  &none  &none  &none  &none  &none
-                                        &none       &bt BT_SEL 4  &bt BT_DISC 4  &none    &none  &none  &none  &none
+&bt BT_CLR   &bt BT_CLR_ALL  &bt BT_NXT  &bt BT_PRV  &bt BT_SEL 0  &bt BT_DISC 0                  &none  &none  &none  &none  &none  &none
+&none        &none           &none       &none       &bt BT_SEL 1  &bt BT_DISC 1                  &none  &none  &none  &none  &none  &none
+&bootloader  &none           &none       &none       &bt BT_SEL 2  &bt BT_DISC 2                  &none  &none  &none  &none  &none  &none
+&none        &none           &none       &none       &bt BT_SEL 3  &bt BT_DISC 3  &none    &none  &none  &none  &none  &none  &none  &none
+                                         &none       &bt BT_SEL 4  &bt BT_DISC 4  &none    &none  &none  &none  &none
             >;
         };
     };
