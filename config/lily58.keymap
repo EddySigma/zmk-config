@@ -17,6 +17,16 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
+        mlt: momentary_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOMENTARY_LAYER_TAP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+        };
     };
 
     keymap {
@@ -31,11 +41,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&none             &kp N1        &kp N2       &kp N3       &kp N4         &kp N5                            &kp N6         &kp N7         &kp N8       &kp N9       &kp N0                &none
-&kp CAPSLOCK      &kp Q         &kp W        &kp E        &kp R          &kp T                             &kp Y          &kp U          &kp I        &kp O        &kp P                 &kp PIPE
-&kp LEFT_SHIFT    &bhm LCTRL A  &bhm LGUI S  &bhm LALT D  &bhm LSHIFT F  &kp G                             &kp H          &bhm RSHIFT J  &bhm RALT K  &bhm RGUI L  &bhm RCTRL SEMICOLON  &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp Z         &kp X        &kp C        &kp V          &kp B    &kp ESCAPE    &kp MINUS  &kp N          &kp M          &kp COMMA    &kp DOT      &kp APOSTROPHE        &kp RIGHT_CONTROL
-                                             &mo 2        &mo 1          &kp TAB  &kp SPACE     &kp RET    &kp BACKSPACE  &none          &none
+&none             &kp N1        &kp N2       &kp N3       &kp N4         &kp N5                               &kp N6         &kp N7         &kp N8       &kp N9       &kp N0                &none
+&kp CAPSLOCK      &kp Q         &kp W        &kp E        &kp R          &kp T                                &kp Y          &kp U          &kp I        &kp O        &kp P                 &kp PIPE
+&kp LEFT_SHIFT    &bhm LCTRL A  &bhm LGUI S  &bhm LALT D  &bhm LSHIFT F  &kp G                                &kp H          &bhm RSHIFT J  &bhm RALT K  &bhm RGUI L  &bhm RCTRL SEMICOLON  &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp Z         &kp X        &kp C        &kp V          &kp B       &kp ESCAPE    &kp MINUS  &kp N          &kp M          &kp COMMA    &kp DOT      &kp APOSTROPHE        &kp RIGHT_CONTROL
+                                             &mo 2        &mo 1          &mlt 3 TAB  &kp SPACE     &kp RET    &kp BACKSPACE  &mo 3          &mo 4
             >;
         };
 
@@ -77,11 +87,21 @@
 
         symbol_layer {
             bindings = <
-&kp F1  &kp F2  &kp F3                &kp F4                 &kp F5            &kp F6                  &none  &none          &none            &none          &none  &none
-&none   &none   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &none                   &none  &kp PIPE       &kp SLASH        &kp BACKSLASH  &none  &none
-&none   &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &none                   &none  &kp ASTERISK   &kp HASH         &kp AT_SIGN    &none  &none
-&none   &none   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT       &none   &none    &none  &none  &kp AMPERSAND  &kp EXCLAMATION  &kp QUESTION   &none  &none
-                                      &none                  &none             &none   &none    &none  &none  &none          &none
+&kp F1  &kp F2     &kp F3                &kp F4                 &kp F5            &kp F6                     &kp F7      &kp F8         &kp F9           &kp F10        &kp F11    &kp F12
+&none   &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp PLUS                   &kp DOLLAR  &kp PIPE       &kp SLASH        &kp BACKSLASH  &none      &none
+&none   &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp MINUS                  &kp EQUAL   &kp ASTERISK   &kp HASH         &kp AT_SIGN    &kp CARET  &none
+&none   &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT       &none      &none    &none  &none       &kp AMPERSAND  &kp EXCLAMATION  &kp QUESTION   &none      &none
+                                         &none                  &none             &none      &none    &none  &none       &none          &none
+            >;
+        };
+
+        connection_layer {
+            bindings = <
+&none  &none  &none  &none  &none  &none                  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+                     &none  &none  &none  &none    &none  &none  &none  &none
             >;
         };
     };
