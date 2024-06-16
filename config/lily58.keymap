@@ -72,11 +72,11 @@
 
         number_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp F6        &kp F7           &kp F8           &kp F9           &kp F10       &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS     &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL  &trans        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &trans
-                        &trans  &trans  &trans  &trans    &trans     &trans        &kp KP_NUMBER_0  &kp DOT
+&none  &none  &none  &none  &none  &none                      &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &kp F11
+&none  &none  &none  &none  &none  &none                      &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS     &kp F12
+&none  &none  &none  &none  &none  &none                      &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS      &none
+&none  &none  &none  &none  &none  &none  &none    &kp EQUAL  &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_ENTER  &none
+                     &none  &none  &none  &none    &none      &none         &kp NUMBER_0  &kp DOT
             >;
         };
     };
